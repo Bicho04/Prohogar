@@ -1,0 +1,8 @@
+mixin articulo(titulo, oferta, img, descripcion, precio)
+	article.articulo
+		figure
+			img(src="http://loremflickr.com/260/240/gim,#{titulo}/all", alt="#{titulo}")
+			figcaption #{oferta}
+		h3.title #{titulo}
+		p.descripcion  #{descripcion}
+		p.price #{precio}

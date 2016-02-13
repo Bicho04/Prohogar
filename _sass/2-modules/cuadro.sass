@@ -1,0 +1,31 @@
+[class^="cuadro-paso"], [class*=" cuadro-paso"]
+	max-width: 98%
+	border-radius: 0.5em
+	box-shadow: 0 0 0.5em #222
+	padding: 1.5em 1.5em 3em
+	color: #fff
+	margin: 1.5em auto
+	.cuadro-title
+		@include display(flex)
+		@include align-items(center)
+		@include justify-content(center)
+		width: 85%
+		// background-color: pink
+		margin: auto
+		span.numero
+			font-size: 4em
+			display: inline-block
+			font-weight: 600
+			margin-right: 0.2em
+		h3.title
+			font-size: 1.5em
+			display: inline-block
+			color: #fff
+			font-weight: 300
+	.cuadro-info
+		text-align: center
+		input, select, option
+			color: #333
+			width: 90%
+			padding: 0.5em
+			text-align: center

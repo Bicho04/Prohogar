@@ -1,0 +1,30 @@
+doctype html
+html(lang='Es-Py')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    block title
+      title Prohogar S.A. 
+
+    meta(name='description', content='Empresa Constructora e Inmobiliaria en Paraguay')
+    meta(name='autor', content='Fincreativo')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='assets/css/main.css')
+
+  body
+    <!--[if lt IE 8]>
+    p.browserupgrade.
+      Estas usando un nevegador <strong>viejo</strong>.
+      Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
+    <![endif]-->
+    .home-wrap
+      include ../_includes/header
+      block body
+    include ../_includes/footer
+    
+    script(type='text/javascript',src='https://code.jquery.com/jquery-2.1.4.min.js')
+    //- script(type='text/javascript',src='assets/js/jquery.mixitup.min.js')
+    script(type='text/javascript',src='assets/js/responsive-nav.min.js')
+    script(type='text/javascript',src='assets/js/owl-carousel.min.js')
+    script(type='text/javascript',src='assets/js/functions.min.js')

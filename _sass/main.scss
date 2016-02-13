@@ -1,0 +1,22 @@
+@import "0-tools/fonts";
+@import "0-tools/bourbon/bourbon";
+@import "0-tools/neat/neat";
+@import "0-tools/normalize";
+
+@import "1-base/vars";
+@import "1-base/base";
+
+@import "2-modules/owl.carousel";
+@import "2-modules/responsive-nav";
+@import "2-modules/cuadro";
+
+@import "3-sections/header";
+@import "3-sections/slide";
+@import "3-sections/paso1";
+@import "3-sections/paso2";
+@import "3-sections/paso3";
+@import "3-sections/paso4";
+@import "3-sections/paso5";
+@import "3-sections/footer";
+
+@import "4-layouts/home";

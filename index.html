@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="Es-Py">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prohogar S.A. - Presupuesto 5 Pasos</title>
+    <meta name="description" content="Empresa Constructora e Inmobiliaria en Paraguay">
+    <meta name="autor" content="Fincreativo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body><!--[if lt IE 8]>
+    <p class="browserupgrade">
+      Estas usando un nevegador <strong>viejo</strong>.
+      Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
+    </p><![endif]-->
+    <div class="home-wrap">
+      <header class="header">
+        <div class="header-menu-logo"> <a href="index.html" class="logo-img"></a></div>
+        <nav class="header-menu">
+          <ul class="header-botones">
+            <li><a href="nosotoros.html">Nosotros</a></li>
+            <li><a href="terrenos.html">Terrenos</a></li>
+            <li><a href="casas.html">Casas</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="slider">
+        <div class="fondo"><img src="assets/img/home.jpg" alt=""></div>
+        <div class="slide"><img src="assets/img/logo-prohogar-Z.png" alt="">
+          <h1 class="slogan">Cinco pasos para tener<br>tu casa propia</h1>
+        </div>
+      </section>
+      <div class="cont-pasos">
+        <section class="cuadro-paso1">
+          <div class="cuadro-title">		<span class="numero">1</span>
+            <h3 class="title">¿En qué ciudad querés vivir?</h3>
+          </div>
+          <div class="cuadro-info">		
+            <select name="id_lugar" id="id_lugar" onchange="mostrar_terrenos() ;cargando();">
+              <option value="">-Elige una Ciudad-</option>
+              <option value="240">Aregua</option>
+              <option value="62">Asunción</option>
+              <option value="44">Capiatá</option>
+              <option value="45">Fernando de la Mora</option>
+              <option value="49">José Augusto Saldivar</option>
+              <option value="50">Lambaré</option>
+              <option value="51">Limpio</option>
+              <option value="52">Luque</option>
+              <option value="53">Mariano Roque Alonso</option>
+              <option value="55">Ñemby</option>
+              <option value="56">San Antonio</option>
+              <option value="57">San Lorenzo</option>
+              <option value="58">Villa Elisa</option>
+              <option value="241">Ypane</option>
+            </select>
+          </div>
+        </section>
+        <section class="cuadro-paso2">
+          <div class="cuadro-title">		<span class="numero">2</span>
+            <h3 class="title">Ingreso familiar</h3>
+          </div>
+          <div class="cuadro-info">
+            <input type="number" placeholder="ingreso">
+          </div>
+        </section>
+        <section class="cuadro-paso3">
+          <div class="cuadro-title">		<span class="numero">3</span>
+            <h3 class="title">¿Ya tenés un terreno?</h3>
+          </div>
+          <div class="cuadro-info">
+            <div class="option">
+              <label>si</label>
+              <input type="radio" name="terreno" value="si">
+            </div>
+            <div class="option">
+              <label>no</label>
+              <input type="radio" name="terreno" value="no">
+            </div>
+          </div>
+        </section>
+        <section class="cuadro-paso4">
+          <div class="cuadro-title">		<span class="numero">4</span>
+            <h3 class="title">Tipo de construcción</h3>
+          </div>
+          <div class="cuadro-info">
+            <figure class="proyecto"></figure>
+          </div>
+        </section>
+        <section class="cuadro-paso5">
+          <div class="cuadro-title">		<span class="numero">5</span>
+            <h3 class="title">Seleccione un presupuesto</h3>
+          </div>
+          <div class="cuadro-info"></div>
+        </section>
+      </div>
+    </div>
+    <footer class="footer">
+      <aside class="social">
+        <ul>
+          <li class="fa fa-facebook-square"><a href="#"></a></li>
+          <li class="fa fa-twitter"><a href="#"></a></li>
+        </ul>
+      </aside>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="assets/js/responsive-nav.min.js"></script>
+    <script type="text/javascript" src="assets/js/owl-carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/functions.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+section.slider
+	width: 100%
+	.fondo
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		max-height: 400px
+		overflow: hidden
+		z-index: -1
+		@include media($small-screen) 
+			box-shadow: 0 0 0.3em #222
+		img 
+			box-shadow: 0 0 0.3em #222
+			width: 100%
+			@include media($large-screen) 
+				position: relative
+				top: -8em
+	.slide
+		max-width: 90%
+		margin: 3em auto
+		text-align: center
+		font-size: 0.7em
+		@include media($small-screen) 
+			max-width: 600px
+			text-align: right
+			font-size: 1em
+
+		h1.slogan
+			color: #fff 
+			font-size: 2.3em
+			text-shadow: 0 0 0.3em #333
+			text-transform: uppercase
+			margin-top: 0em
+
+		img 
+			width: 15em
+			margin: 0
