@@ -1,3 +1,38 @@
-section.cuadro-paso4
-	background-color: #8DC54B
+section.cont-paso4
 	width: 100%
+	margin: 2em auto 8em
+	.cuadro-paso4
+		background-color: #8DC54B
+		.cuadro-title
+			@include justify-content(flex-start)
+			@include align-items(center)
+			width: 95%
+		.cuadro-info
+			width: 95%
+			@include display(flex)
+			@include align-items(center)
+			@include flex-direction(column)
+			@include flex-wrap(wrap)
+			@include justify-content(space-between)
+			@include media($small-screen) 
+				@include flex-direction(row)
+			@include media($large-screen) 
+				@include flex-direction(row)
+			figure.proyecto 
+				width: 30%
+				min-width: 240px
+				overflow: hidden
+				border-radius: 0.8em
+				margin: 0
+				@include media($small-screen) 
+					min-width: 120px
+				img
+					width: 100%
+			h4
+				margin: 0
+				color: #FFF
+				text-align: center
+				font-weight: 300
+				span.numero
+					font-weight: 600
+					margin: 0 0.2em

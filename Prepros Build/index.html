@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="Es-Py">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prohogar S.A. - Presupuesto 5 Pasos</title>
+    <meta name="description" content="Empresa Constructora e Inmobiliaria en Paraguay">
+    <meta name="autor" content="Fincreativo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body><!--[if lt IE 8]>
+    <p class="browserupgrade">
+      Estas usando un nevegador <strong>viejo</strong>.
+      Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
+    </p><![endif]-->
+    <div class="home-wrap">
+      <header class="header">
+        <div class="header-menu-logo"> <a href="index.html" class="logo-img"></a></div>
+        <nav class="header-menu">
+          <ul class="header-botones">
+            <li><a href="nosotoros.html">Nosotros</a></li>
+            <li><a href="terrenos.html">Terrenos</a></li>
+            <li><a href="casas.html">Casas</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="slider">
+        <div class="fondo"><img src="assets/img/slide/home.jpg" alt=""></div>
+        <div class="slide"><img src="assets/img/logo-prohogar-Z.png" alt="">
+          <h1 class="slogan">Cinco pasos para tener<br>tu casa propia</h1>
+        </div>
+      </section>
+      <div class="cont-pasos">
+        <section class="cuadro-paso1">
+          <div class="cuadro-title">		<span class="numero">1</span>
+            <h3 class="title">¿En qué ciudad querés vivir?</h3>
+          </div>
+          <div class="cuadro-info">		
+            <select name="id_lugar" id="id_lugar" onchange="mostrar_terrenos() ;cargando();">
+              <option value="">-Elige una Ciudad-</option>
+              <option value="240">Aregua</option>
+              <option value="62">Asunción</option>
+              <option value="44">Capiatá</option>
+              <option value="45">Fernando de la Mora</option>
+              <option value="49">José Augusto Saldivar</option>
+              <option value="50">Lambaré</option>
+              <option value="51">Limpio</option>
+              <option value="52">Luque</option>
+              <option value="53">Mariano Roque Alonso</option>
+              <option value="55">Ñemby</option>
+              <option value="56">San Antonio</option>
+              <option value="57">San Lorenzo</option>
+              <option value="58">Villa Elisa</option>
+              <option value="241">Ypane</option>
+            </select>
+          </div>
+        </section>
+        <section class="cuadro-paso2">
+          <div class="cuadro-title">		<span class="numero">2</span>
+            <h3 class="title">Ingreso familiar</h3>
+          </div>
+          <div class="cuadro-info">
+            <input type="number" placeholder="ingreso">
+          </div>
+        </section>
+        <section class="cuadro-paso3">
+          <div class="cuadro-title">		<span class="numero">3</span>
+            <h3 class="title">¿Ya tenés un terreno?</h3>
+          </div>
+          <div class="cuadro-info">
+            <div class="option">
+              <label>si</label>
+              <input type="radio" name="terreno" value="si">
+            </div>
+            <div class="option">
+              <label>no</label>
+              <input type="radio" name="terreno" value="no">
+            </div>
+          </div>
+        </section>
+        <section class="cont-paso4">
+          <div class="cuadro-paso4">
+            <div class="cuadro-title">		<span class="numero">4</span>
+              <h3 class="title">Tipo de construcción</h3>
+            </div>
+            <div class="cuadro-info">
+              <figure class="proyecto"><img src="assets/img/house.jpg" alt="">
+                <h4><span class="numero">1</span>Dormitorio</h4>
+              </figure>
+              <figure class="proyecto"><img src="assets/img/house.jpg" alt="">
+                <h4><span class="numero">2</span>Dormitorios</h4>
+              </figure>
+              <figure class="proyecto"><img src="assets/img/house.jpg" alt="">
+                <h4><span class="numero">3</span>Dormitorios</h4>
+              </figure>
+            </div>
+          </div>
+          <article class="casa-paso4">
+            <div class="casa-imagenes"><img src="assets/img/house.jpg" alt="" class="casa-imagen active"><img src="assets/img/house.jpg" alt="" class="casa-imagen"><img src="assets/img/house.jpg" alt="" class="casa-imagen"><img src="assets/img/house.jpg" alt="" class="casa-imagen"></div>
+            <div class="casa-informaciones">
+              <h3 class="Referencia">Casa ref 040</h3>
+              <p>1 baño</p>
+              <p>Sup. 112.62 m<span>2</span>a 1,570,919 Gs.</p>
+              <hr>
+              <div class="precios">
+                <div class="precio">
+                  <h5>Contado</h5><span>Gs. 176.916.893</span>
+                </div>
+                <div class="precio">
+                  <h5>Financiado</h5><span>Gs. 1.646.389</span>
+                </div>
+              </div><i class="fa fa-document">Ver ficha técnica</i><i class="fa fa-document">ver presupuesto</i>
+              <hr>
+              <h5>Acabados</h5>
+              <ul>
+                <li>minimalista</li>
+                <li>Rústico</li>
+                <li>Tradicional</li>
+                <li>Fina</li>
+                <li>Lujo</li>
+              </ul>
+            </div><a class="btn">Seleccionar proyecto</a>
+            <div class="pagination">
+              <p>1 de 10 opciones</p><a href="#">ver siguiente</a>
+            </div>
+          </article>
+        </section>
+        <section class="cuadro-paso5">
+          <div class="cuadro-title">		<span class="numero">5</span>
+            <h3 class="title">Seleccione un presupuesto</h3>
+          </div>
+          <div class="cuadro-info"></div>
+        </section>
+      </div>
+    </div>
+    <footer class="footer">
+      <aside class="social">
+        <ul>
+          <li class="fa fa-facebook-square"><a href="#"></a></li>
+          <li class="fa fa-twitter"><a href="#"></a></li>
+        </ul>
+      </aside>
+      <aside class="info">
+        <p>Austria 1730 esq. Viena</p>
+        <p>Tel.: 021 603 937, Cel.: 0983828382</p>
+        <p>contacto64prohogar.com.py</p>
+      </aside>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="assets/js/responsive-nav.min.js"></script>
+    <script type="text/javascript" src="assets/js/owl-carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/functions.min.js"></script>
+  </body>
+</html>

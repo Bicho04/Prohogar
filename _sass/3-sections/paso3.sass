@@ -1,24 +1,23 @@
 section.cuadro-paso3
 	background-color: #1574B7
-	width: 320px
-	// @include media($small-screen) 
-	// 	width: 100%
-	@include media($large-screen) 
-		width: 320px
+	width: 30%
+	height: 220px
+	// // @include media($small-screen) 
+	// // 	width: 100%
+	// @include media($large-screen) 
+	// 	width: 320px
 	.cuadro-info
 		@include display(flex)
 		@include justify-content(center)
-		max-width: 320px
-		margin: auto
-	.option
-		display: inline-block
-		width: 30%
-		margin: 0 0.5em
-		@include display(flex)
-		@include align-items(center)
-		label
-			position: relative
-			bottom: 2px
-			margin-right: -1em
-			margin-left: 1em
+		width: 80%
+		.option
+			width: 100%
+			display: block
+			@include display(flex)
+			@include align-items(center)
+			label
+				position: relative
+				bottom: 2px
+				margin-right: -1em
+				margin-left: 1em
 
