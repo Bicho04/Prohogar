@@ -1,7 +1,5 @@
 section.cuadro-paso1
-	.cuadro-title		
-		span.numero 1
-		h3.title ¿En qué ciudad querés vivir?
+	+cuadro-title('1','¿En qué ciudad querés vivir?')
 	.cuadro-info		
 		select(name="id_lugar",id="id_lugar",onchange="mostrar_terrenos() ;cargando();")
 			option(value="") -Elige una Ciudad-

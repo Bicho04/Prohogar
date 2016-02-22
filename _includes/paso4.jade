@@ -1,6 +1,65 @@
 section.cuadro-paso4
-	.cuadro-title		
-		span.numero 4
-		h3.title Tipo de construcción
+	+cuadro-title('4','Tipo de construcción')
 	.cuadro-info
 		figure.proyecto
+			img(src="http://loremflickr.com/800/300/bedroom?random=1", alt="")
+			h4
+				span.numero 1
+				|Dormitorio
+		figure.proyecto
+			img(src="http://loremflickr.com/800/300/bedroom?random=2", alt="")
+			h4
+				span.numero 2
+				|Dormitorios
+		figure.proyecto
+			img(src="http://loremflickr.com/800/300/bedroom?random=3", alt="")
+			h4
+				span.numero 3
+				|Dormitorios
+article.casa-paso4
+	aside.casa-galeria
+		.casa-imagenes(id='casa-imagenes')
+			//- li.casa-imagen: img(src="assets/img/house.jpg", alt="")
+			figure.casa-imagen: img(src="http://loremflickr.com/800/600/house?random=1", alt="")
+			figure.casa-imagen: img(src="http://loremflickr.com/800/600/house?random=2", alt="")
+			figure.casa-imagen: img(src="http://loremflickr.com/800/600/house?random=3", alt="")
+		.casa-imagenes-control(id='casa-imagenes-control')
+			//- li: a(href="#").casa-imagen: img(src="assets/img/house.jpg", alt="")
+			figure.casa-imagencita: a(href="#"): img(src="http://loremflickr.com/800/600/house?random=1", alt="")
+			figure.casa-imagencita: a(href="#"): img(src="http://loremflickr.com/800/600/house?random=2", alt="")
+			figure.casa-imagencita: a(href="#"): img(src="http://loremflickr.com/800/600/house?random=3", alt="")
+	.casa-informaciones
+		h3.Referencia Casa ref 040
+		p 1 baño
+		p Sup. 112.62 m
+			span 2
+			| a 1,570,919 Gs.
+		hr
+		.precios
+			.precio
+				h5 Contado
+				span Gs. 176.916.893
+			.precio
+				h5 Financiado
+				span Gs. 1.646.389
+		p.ico-pdf
+			i.fa.fa-file-text
+			| Ver ficha técnica
+		p.ico-pdf
+			i.fa.fa-file-text
+			| ver presupuesto
+		hr
+		h5 Acabados
+		ul.casa-acabados
+			li minimalista
+			li Rústico
+			li Tradicional
+			li Fina
+			li Lujo
+	a(href="#").casa-btn.btn Seleccionar proyecto
+	footer.casa-footer
+		p 1 de 10 opciones
+		a(href="#") ver siguiente
+
+
+
