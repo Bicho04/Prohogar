@@ -1,7 +1,53 @@
 section.cuadro-paso5
-	background-color: #F59334
+	background-color: $color-paso5
 	width: 100%
+	height: auto
 	.cuadro-title
 		@include justify-content(flex-start)
-		@include align-items(center)
 		width: 95%
+
+	.cuadro-info
+		width: 95%
+		.datos
+			text-align: center
+			padding: 0.3em 0	
+			border: 1px solid #fff
+			border-radius: 0.5em
+			p.dato
+				color: $text-color
+				margin: 0
+				padding: 0 3%
+				border-left: 1px solid white
+				display: inline-block
+				&:nth-child(1)
+					border-left: none
+	.entrega
+		border: 1px solid #fff
+		margin-top: 1.5em
+		border-radius: 0.5em
+		padding: 1em
+		width: 60%
+		display: inline-block
+		&-title
+			@include display(flex)
+			@include align-items(center)
+			@include justify-content(center)
+			h3
+				font-weight: 400
+				color: #fff
+			select
+				width: 180px
+		&-table
+			width: 100%
+			border-radius: 0.5em
+			color: $text-color
+			background-color: lighten($color-paso5,30)
+			tr 
+				border: 1px	solid: $color-paso5
+			td
+				padding-left: 0.5em
+
+			
+
+
+

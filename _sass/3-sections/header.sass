@@ -21,15 +21,16 @@ header.header
 			height: 2.6em
 			width: 2.6em	
 			padding: 0.2em
+			@include filter(saturate(0%)brightness(20%)invert(100%))
 			background: 
 				color: transparent 
 				image: url(../img/logo-prohogar-W.png) 
-				position: 0 0
+				position: 100% 0
 				size: 200% 
 				repeat: no-repeat
+			transition: all 0.5s
 			&:hover
-				background-position: 100% 0
-
+				@include filter(none)
 
 	nav.header-menu
 		position: relative
@@ -37,6 +38,7 @@ header.header
 		height: 100%
 		ul.header-botones
 			height: 100%
+			margin: 0
 			text-align: center
 			list-style: none
 			@include display(flex)

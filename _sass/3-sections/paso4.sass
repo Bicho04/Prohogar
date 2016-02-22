@@ -1,38 +1,146 @@
-section.cont-paso4
-	width: 100%
-	margin: 2em auto 8em
-	.cuadro-paso4
-		background-color: #8DC54B
-		.cuadro-title
-			@include justify-content(flex-start)
-			@include align-items(center)
-			width: 95%
-		.cuadro-info
-			width: 95%
-			@include display(flex)
-			@include align-items(center)
-			@include flex-direction(column)
-			@include flex-wrap(wrap)
-			@include justify-content(space-between)
+section.cuadro-paso4
+	background-color: $color-paso4
+	width: 98%
+	height: auto
+	margin-bottom: 0
+	.cuadro-title
+		@include justify-content(flex-start)
+		// @include align-items(center)
+		width: 95%
+	.cuadro-info
+		width: 95%
+		@include display(flex)
+		@include align-items(center)
+		@include flex-direction(column)
+		@include flex-wrap(wrap)
+		@include justify-content(space-between)
+		@include media($small-screen) 
+			@include flex-direction(row)
+		@include media($large-screen) 
+			@include flex-direction(row)
+		figure.proyecto 
+			width: 30%
+			min-width: 240px
+			overflow: hidden
+			border-radius: 0.8em
+			margin: 0
 			@include media($small-screen) 
-				@include flex-direction(row)
-			@include media($large-screen) 
-				@include flex-direction(row)
-			figure.proyecto 
-				width: 30%
-				min-width: 240px
-				overflow: hidden
-				border-radius: 0.8em
-				margin: 0
-				@include media($small-screen) 
-					min-width: 120px
-				img
-					width: 100%
-			h4
-				margin: 0
-				color: #FFF
-				text-align: center
-				font-weight: 300
-				span.numero
-					font-weight: 600
-					margin: 0 0.2em
+				min-width: 120px
+			img
+				width: 100%
+		h4
+			margin: 0
+			color: #FFF
+			text-align: center
+			font-weight: 300
+			span.numero
+				font-weight: 600
+				margin: 0 0.2em
+
+
+article.casa-paso4
+	width: 100%
+	position: relative
+	margin-bottom: 8em
+	padding: 1em
+	@include media($small-screen) 
+		@include display(flex)
+		@include justify-content(space-between)
+
+	aside.casa-galeria
+		@include order(2)
+		@include display(flex)
+		@include justify-content(space-around)
+		width: 60%
+		height: 350px
+		figure
+			margin: 0
+			height: 100%
+			img
+				display: block
+				width: 100%
+				height: 100%
+				border-radius: 1em
+		.casa-imagenes
+			border-radius: 1em
+			width: 90%
+		.casa-imagenes-control
+			width: 10%
+			.casa-imagencita
+				margin: 0 auto 1em
+				border-radius: 0.3em
+				a
+					display: block
+					img
+						height: 60px
+
+
+	.casa-informaciones
+		@include order(0)
+		width: 240px
+		line-height: 1.1
+		hr
+		 border-style: dashed
+		 margin: 1em 0
+		 border-color: #999
+		h3.Referencia
+			margin: 0.2em 0
+			color: $color-paso3
+			font-size: 2.3em
+		h5
+			color: $text-color
+			margin: 0 0 0.5em 0
+		p 
+			margin: 0
+	.precios
+		@include display(flex)
+		.precio
+			width: 50%	
+			span 
+				background-color: $color-paso4
+				font-size: 0.8em
+				border-radius: 0.3em
+				padding: 0 0.2em
+				color: white
+	p.ico-pdf
+		margin: 1em 0
+		i 
+			margin-right: 0.5em
+	ul.casa-acabados
+		@include display(flex)
+		@include flex-wrap(wrap)
+		list-style-type: circle
+		// margin: 0
+		padding-left: 1.2em
+		li 
+			width: 50%
+			line-height: 1.6em
+
+	a.casa-btn
+		@include order(1)
+		@include align-self(flex-end)
+		background-color: $color-paso4
+		color: #fff
+		border-radius: 0.5em
+		padding: 0.5em 1em	
+		display: block
+		font-weight: 600
+		&:hover
+			background-color: $color-paso3
+
+	.casa-footer
+		@include display(flex)
+		@include justify-content(space-between)
+		width: 100%
+		position: absolute
+		top: 100%
+		left: 0
+		margin-top: 0.5em
+		height: 3em
+		border-top: 1px solid $color-paso3
+		font-weight: 600
+		color: $color-paso3
+		a 
+			color: $color-paso3
+			&:after
+				content: ' >>'

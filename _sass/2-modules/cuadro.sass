@@ -1,20 +1,33 @@
+.cont-pasos
+	width: 80%
+	// background-color: green
+	margin: auto
+	@include display(flex)
+	@include flex-wrap(wrap)
+	// @include flex-direction(column)
+	@include align-items(center)
+	@include justify-content(space-between)
+	
 [class^="cuadro-paso"], [class*=" cuadro-paso"]
-	max-width: 98%
-	min-width: 300px
+	width: 25vw
+	height: 15vw
+	overflow: hidden
 	border-radius: 0.5em
 	box-shadow: 0 0 0.5em #222
 	color: #fff
 	padding: 1.5em 0
-	margin: 2em auto 8em
+	box-sizing: border-box
+	margin: 1vw auto 7vw
 	@include display(flex)
 	@include align-items(center)
-	@include flex-direction(column )
+	@include flex-direction(column)
 	@include justify-content(center)
-	&:nth-child(-n+3)
-		margin: 2em auto
-	@include media($small-screen) 
-		&:nth-child(-n+3)
-			margin: 2em auto 8em
+	// &:nth-child(-n+3)
+		// margin: 2em auto
+	// @include media($small-screen) 
+		// &:nth-child(-n+3)
+			// margin: 2em auto 8em
+
 	.cuadro-title
 		@include display(flex)
 		@include align-items(center)
@@ -22,26 +35,30 @@
 		width: 70%
 		margin: 0 auto
 		// background-color: pink
+		// display: none
 		span.numero
 			line-height: 1em
-			font-size: 4em
+			font-size: 6em
 			display: inline-block
-			font-weight: 600
+			font-weight: 700
 			position: relative
 			bottom: 0.01em
 			// background-color: purple
 		h3.title
 			margin: 0
-			font-size: 1.5em
+			margin-left: 0.3em
+			font-size: 2em
 			display: inline-block
 			color: #fff
 			font-weight: 300
 			// background-color: gold
+
 	.cuadro-info
 		width: 75%
 		min-height: 3em
 		margin: 0 auto
 		// background-color: green
+		// display: none
 		input, select, option
 			color: #333
 			width: 100%
