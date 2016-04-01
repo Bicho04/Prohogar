@@ -7,6 +7,9 @@
   width: 100%;
   padding: 0;
   margin: 0;
+
+  border-radius: 1em;
+  
   }
 
 .rslides li {
@@ -16,18 +19,21 @@
   width: 100%;
   left: 0;
   top: 0;
+
+  border-radius: 1em;
+  
   }
 
 .rslides li:first-child {
   position: relative;
   display: block;
-  float: left;
+  // float: left;
   }
 
 .rslides img {
   display: block;
   height: auto;
-  float: left;
+  // float: left;
   width: 100%;
   border: 0;
   }

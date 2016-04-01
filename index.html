@@ -14,23 +14,23 @@
       Estas usando un nevegador <strong>viejo</strong>.
       Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
     </p><![endif]-->
+    <header class="header">
+      <div class="header-menu-logo"> <a href="index.html" class="logo-img"></a></div>
+      <nav class="header-menu">
+        <ul class="header-botones">
+          <li><a href="nosotoros.html">Nosotros</a></li>
+          <li><a href="terrenos.html">Terrenos</a></li>
+          <li><a href="casas.html">Casas</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="home-wrap">
-      <header class="header">
-        <div class="header-menu-logo"> <a href="index.html" class="logo-img"></a></div>
-        <nav class="header-menu">
-          <ul class="header-botones">
-            <li><a href="nosotoros.html">Nosotros</a></li>
-            <li><a href="terrenos.html">Terrenos</a></li>
-            <li><a href="casas.html">Casas</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="noticias.html">Noticias</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
       <section class="slider">
         <div class="fondo"><img src="assets/img/slide/home.jpg" alt=""></div>
-        <div class="slide"><img src="assets/img/logo-prohogar-Z.png" alt="">
+        <div class="slide"><img src="assets/img/Logo-Prohogar-Z.png" alt="">
           <h1 class="slogan">Cinco pasos para tener<br>tu casa propia</h1>
         </div>
       </section>
@@ -87,13 +87,14 @@
                     <h3 class="title">Tipo de construcción</h3>
                   </div>
           <div class="cuadro-info">
-            <figure class="proyecto"><img src="http://loremflickr.com/800/300/bedroom?random=1" alt="">
+            <figure class="proyecto"><img src="assets/img/casas/UnDormitorio.jpg" alt="">
               <h4><span class="numero">1</span>Dormitorio</h4>
             </figure>
-            <figure class="proyecto"><img src="http://loremflickr.com/800/300/bedroom?random=2" alt="">
+            <figure class="proyecto"><img src="assets/img/casas/DosDormitorios.jpg" alt="">
               <h4><span class="numero">2</span>Dormitorios</h4>
+              <h4><span class="numero">reg</span>0045</h4>
             </figure>
-            <figure class="proyecto"><img src="http://loremflickr.com/800/300/bedroom?random=3" alt="">
+            <figure class="proyecto"><img src="assets/img/casas/TresDormitorios.jpg" alt="">
               <h4><span class="numero">3</span>Dormitorios</h4>
             </figure>
           </div>
@@ -101,15 +102,15 @@
         <article class="casa-paso4">
           <aside class="casa-galeria">
             <div id="casa-imagenes" class="casa-imagenes">
-              <figure class="casa-imagen"><img src="http://loremflickr.com/800/600/house?random=1" alt=""></figure>
-              <figure class="casa-imagen"><img src="http://loremflickr.com/800/600/house?random=2" alt=""></figure>
-              <figure class="casa-imagen"><img src="http://loremflickr.com/800/600/house?random=3" alt=""></figure>
+              <figure class="casa-imagen"><img src="assets/img/casas/Casa-1.1.jpg" alt=""></figure>
+              <figure class="casa-imagen"><img src="assets/img/casas/Casa-1.2.jpg" alt=""></figure>
+              <figure class="casa-imagen"><img src="assets/img/casas/Casa-1.3.jpg" alt=""></figure>
             </div>
-            <div id="casa-imagenes-control" class="casa-imagenes-control">
-              <figure class="casa-imagencita"><a href="#"><img src="http://loremflickr.com/800/600/house?random=1" alt=""></a></figure>
-              <figure class="casa-imagencita"><a href="#"><img src="http://loremflickr.com/800/600/house?random=2" alt=""></a></figure>
-              <figure class="casa-imagencita"><a href="#"><img src="http://loremflickr.com/800/600/house?random=3" alt=""></a></figure>
-            </div>
+            <ul id="casa-imagenes-control" class="casa-imagenes-control">
+              <li class="casa-imagencita"><a href="#"><img src="assets/img/casas/Casa-1.1.jpg" alt=""></a></li>
+              <li class="casa-imagencita"><a href="#"><img src="assets/img/casas/Casa-1.2.jpg" alt=""></a></li>
+              <li class="casa-imagencita"><a href="#"><img src="assets/img/casas/Casa-1.3.jpg" alt=""></a></li>
+            </ul>
           </aside>
           <div class="casa-informaciones">
             <h3 class="Referencia">Casa ref 040</h3>
@@ -152,88 +153,47 @@
             </div>
             <div class="entrega">
               <div class="entrega-title">
-                <h3>Plazo de entrega</h3>
-                <select name="id_lugar" id="id_lugar" onchange="mostrar_terrenos() ;cargando();">
-                  <option value="">48</option>
-                  <option value="">36</option>
-                  <option value="">24</option>
-                  <option value="">12</option>
-                  <option value="">6</option>
-                </select>
+                <h3>Monto a financiar</h3>
+                <p class="entreg-montoTotal">148.642.699</p>
               </div>
-              <table class="entrega-table">
-                <tr>
-                  <th>Pagos por Etapas</th>
-                  <th>Meses</th>
-                  <th>Totales</th>
-                  <th>Dias</th>
-                </tr>
-                <tr>
-                  <td>1°: Estructuras</td>
-                  <td>4.8</td>
-                  <td>28.473.402</td>
-                  <td>144</td>
-                </tr>
-                <tr>
-                  <td>2°: Cerramientos</td>
-                  <td>4.57</td>
-                  <td>27.049.732</td>
-                  <td>137</td>
-                </tr>
-                <tr>
-                  <td>3°: Instalaciones</td>
-                  <td>4.33</td>
-                  <td>25.626.061</td>
-                  <td>130</td>
-                </tr>
-                <tr>
-                  <td>4°: Revestimientos</td>
-                  <td>3.83</td>
-                  <td>22.778.721</td>
-                  <td>115</td>
-                </tr>
-                <tr>
-                  <td>5°: Artefactos</td>
-                  <td>3.37</td>
-                  <td>19.931.381</td>
-                  <td>101</td>
-                </tr>
-                <tr>
-                  <td>6°: Terminaciones</td>
-                  <td>3.13</td>
-                  <td>18.507.711</td>
-                  <td>94</td>
-                </tr>
-                <tr>
-                  <td>
-                     
-                    Pago (+IVA): <strong>5.931.959</strong>
-                  </td>
-                  <td>Mensual</td>
-                  <td>142.367.008</td>
-                  <td>720</td>
-                </tr>
-              </table>
-            </div><a class="btn">Contacte por este presupuesto</a>
+              <div class="entrega-cuadros">
+                <div class="entrega-cuadro">
+                  <h4>Terreno (12169)</h4>
+                  <p>45.000.000</p>
+                </div>
+                <div class="entrega-cuadro">
+                  <h4>Construcción (225)</h4>
+                  <p>81.076.174</p>
+                </div>
+                <div class="entrega-cuadro">
+                  <h4>Terreno (12169)</h4>
+                  <p>22.296.405</p>
+                </div>
+                <div class="entrega-cuadro">
+                  <h4>Cuotas</h4>
+                  <p>1.383.269</p>
+                </div>
+              </div>
+            </div><a href="#" class="btn">Contacte por este presupuesto</a>
           </div>
         </section>
       </div>
-      <footer class="footer">
-        <div class="cont-footer">
-          <aside class="social">
-            <ul>
-              <li class="fa fa-twitter"><a href="#"></a></li>
-              <li class="fa fa-facebook-square"><a href="#"></a></li>
-            </ul>
-          </aside>
-          <aside class="info">
-            <p>Austria 1730 esq. Viena</p>
-            <p>Tel.: 021 603 937, Cel.: 0983828382</p>
-            <p>contacto64prohogar.com.py</p>
-          </aside>
-        </div>
-      </footer>
     </div>
+    <footer class="footer">
+      <div class="cont-footer">
+        <aside class="social">
+          <ul>
+            <li class="fa fa-twitter"><a href="#"></a></li>
+            <li class="fa fa-facebook-square"><a href="#"></a></li>
+          </ul>
+        </aside>
+        <aside class="info">
+          <p>Austria 1730 esq. Viena</p>
+          <p>Tel.: 021 603 937, Cel.: 0983828382</p>
+          <p>contacto64prohogar.com.py</p>
+        </aside>
+      </div>
+    </footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="assets/js/responsive-nav.min.js"></script>
     <script type="text/javascript" src="assets/js/owl-carousel.min.js"></script>

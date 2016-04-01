@@ -1,24 +1,32 @@
 section.slider
-	width: 100%
+	min-width: 100%
+	// height: 300px
 	.fondo
 		position: absolute
 		top: 0
 		left: 0
 		width: 100%
-		height: 32vw
+		height: 70vh
 		overflow: hidden
 		z-index: -1
+		background: cyan
+		@include display(flex)
+		@include justify-content(center)
+		@include align-items(center)
 		@include media($small-screen) 
 			box-shadow: 0 0 0.3em #222
 		img 
 			box-shadow: 0 0 0.3em #222
-			width: 100%
-			@include media($large-screen) 
+			height: 100%
+			width: auto	
+			@include media($small-screen) 
+				min-width: 100%
+				height: auto
 				position: relative
-				top: -8em
+				top: 15%
 	.slide
-		max-width: 90vw
-		margin: 4.5vw auto
+		max-width: 90%
+		margin: 6% auto
 		text-align: center
 		font-size: 0.7em
 		@include media($small-screen) 
@@ -34,5 +42,5 @@ section.slider
 			margin-top: 0em
 
 		img 
-			width: 15em
+			min-height: 100%
 			margin: 0

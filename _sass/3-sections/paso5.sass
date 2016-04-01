@@ -1,6 +1,5 @@
 section.cuadro-paso5
 	background-color: $color-paso5
-	width: 100%
 	height: auto
 	.cuadro-title
 		@include justify-content(flex-start)
@@ -29,25 +28,48 @@ section.cuadro-paso5
 		width: 60%
 		display: inline-block
 		&-title
-			@include display(flex)
-			@include align-items(center)
-			@include justify-content(center)
+			text-align: center
 			h3
 				font-weight: 400
 				color: #fff
-			select
-				width: 180px
-		&-table
-			width: 100%
-			border-radius: 0.5em
-			color: $text-color
-			background-color: lighten($color-paso5,30)
-			tr 
-				border: 1px	solid: $color-paso5
-			td
-				padding-left: 0.5em
+				margin-bottom: 0.5rem
+			p.entreg-montoTotal
+				background: #F05B26
+				font-size: 2em
+				border-radius: 0.5rem
+				margin-bottom: 1rem
+		&-cuadros 
+			@include display(flex)
+			@include flex-wrap(wrap)
+			@include justify-content(space-between)
+			text-align: center
+			.entrega-cuadro
+				width: 48%
+				h4 
+					margin-top: 0
+					background: #F05B26
+					border-radius: 0.5rem 0.5rem 0 0
+					margin-bottom: 0
+					color: #FFF
+					font-weight: 400
+				p
+					font-size: 1.8em
+					background: rgba(255,255,255,0.8)
+					color: #333
+					border-radius: 0 0 0.5rem 0.5rem
+	a.btn
+		background-color: #F05B26
+		color: #fff
+		border-radius: 0.5em
+		padding: 0.5em 1em	
+		display: inline-block
+		font-weight: 600
+		vertical-align: bottom
+		margin: 0 2em
+		&:hover
+			background-color: $color-paso3
 
-			
+
 
 
 
