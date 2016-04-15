@@ -16,17 +16,20 @@ section.cuadro-paso5
 				color: $text-color
 				margin: 0
 				padding: 0 3%
-				border-left: 1px solid white
 				display: inline-block
-				&:nth-child(1)
-					border-left: none
+
+				@include media($small-screen) 
+					border-left: 1px solid white
+					&:nth-child(1)
+						border-left: none
 	.entrega
 		border: 1px solid #fff
 		margin-top: 1.5em
 		border-radius: 0.5em
 		padding: 1em
-		width: 60%
-		display: inline-block
+		@include media($small-screen) 
+			width: 60%
+			display: inline-block
 		&-title
 			text-align: center
 			h3
@@ -65,7 +68,7 @@ section.cuadro-paso5
 		display: inline-block
 		font-weight: 600
 		vertical-align: bottom
-		margin: 0 2em
+		margin: 1em 2em
 		&:hover
 			background-color: $color-paso3
 

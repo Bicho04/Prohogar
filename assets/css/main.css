@@ -3669,6 +3669,7 @@ body {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  transition: all 0.5s;
 }
 
 [class^="cuadro-paso"] .cuadro-title, [class*=" cuadro-paso"] .cuadro-title {
@@ -4058,13 +4059,13 @@ section.cuadro-paso3 .cuadro-info .option label {
   margin-left: 1em;
 }
 
-section.cuadro-paso4 {
+section.cuadro-paso4, .cuadro-pasoTerrenos {
   background-color: #8DC54B;
   height: auto;
   margin-bottom: 0;
 }
 
-section.cuadro-paso4 .cuadro-title {
+section.cuadro-paso4 .cuadro-title, .cuadro-pasoTerrenos .cuadro-title {
   box-pack: start;
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
@@ -4074,95 +4075,52 @@ section.cuadro-paso4 .cuadro-title {
   -ms-flex-pack: start;
 }
 
-section.cuadro-paso4 .cuadro-info {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  box-orient: vertical;
-  box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify;
+section.cuadro-paso4 .cuadro-info, .cuadro-pasoTerrenos .cuadro-info {
+  white-space: nowrap;
 }
 
-@media screen and (min-width: 35rem) {
-  section.cuadro-paso4 .cuadro-info {
-    box-orient: horizontal;
-    box-direction: normal;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  section.cuadro-paso4 .cuadro-info {
-    box-orient: horizontal;
-    box-direction: normal;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-direction: row;
-  }
-}
-
-section.cuadro-paso4 .cuadro-info figure.proyecto {
-  width: 30%;
+section.cuadro-paso4 .cuadro-info li.proyecto, .cuadro-pasoTerrenos .cuadro-info li.proyecto {
+  width: 320px;
+  vertical-align: top;
   min-width: 95%;
   overflow: hidden;
   margin: 0.5em auto;
+  display: inline-block;
 }
 
 @media screen and (min-width: 35rem) {
-  section.cuadro-paso4 .cuadro-info figure.proyecto {
+  section.cuadro-paso4 .cuadro-info li.proyecto, .cuadro-pasoTerrenos .cuadro-info li.proyecto {
     min-width: 120px;
+    margin: 0 0.5em;
   }
 }
 
-section.cuadro-paso4 .cuadro-info figure.proyecto img {
-  width: 100%;
+section.cuadro-paso4 .cuadro-info li.proyecto img, .cuadro-pasoTerrenos .cuadro-info li.proyecto img {
+  height: 160px;
+  width: 90%;
+  margin: auto;
+  display: block;
   border-radius: 0.8em;
 }
 
-section.cuadro-paso4 .cuadro-info h4 {
+section.cuadro-paso4 .cuadro-info h4, .cuadro-pasoTerrenos .cuadro-info h4 {
   margin: 0;
   color: #FFF;
   text-align: center;
   font-weight: 300;
 }
 
-section.cuadro-paso4 .cuadro-info h4 span.numero {
+section.cuadro-paso4 .cuadro-info h4 strong, .cuadro-pasoTerrenos .cuadro-info h4 strong {
   font-weight: 600;
   margin: 0 0.2em;
 }
 
-article.casa-paso4 {
+section.casas {
+  width: 100%;
+  position: relative;
+}
+
+.casa-paso4 {
   width: 100%;
   position: relative;
   margin-bottom: 8em;
@@ -4170,7 +4128,7 @@ article.casa-paso4 {
 }
 
 @media screen and (min-width: 35rem) {
-  article.casa-paso4 {
+  .casa-paso4 {
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -4188,7 +4146,7 @@ article.casa-paso4 {
   }
 }
 
-article.casa-paso4 .casa-galeria {
+.casa-paso4 .casa-galeria {
   box-ordinal-group: 2;
   -webkit-order: 2;
   -moz-order: 2;
@@ -4211,7 +4169,7 @@ article.casa-paso4 .casa-galeria {
 }
 
 @media screen and (min-width: 35rem) {
-  article.casa-paso4 .casa-galeria {
+  .casa-paso4 .casa-galeria {
     box-orient: horizontal;
     box-direction: normal;
     -webkit-flex-direction: row;
@@ -4222,17 +4180,17 @@ article.casa-paso4 .casa-galeria {
   }
 }
 
-article.casa-paso4 .casa-galeria figure, article.casa-paso4 .casa-galeria li {
+.casa-paso4 .casa-galeria figure, .casa-paso4 .casa-galeria li {
   margin: 0;
   padding: 0;
 }
 
-article.casa-paso4 .casa-galeria figure img, article.casa-paso4 .casa-galeria li img {
+.casa-paso4 .casa-galeria figure img, .casa-paso4 .casa-galeria li img {
   border-radius: 1em;
   max-height: 100%;
 }
 
-article.casa-paso4 .casa-galeria .casa-imagen {
+.casa-paso4 .casa-galeria .casa-imagen {
   width: 100%;
   height: 220px;
   display: -webkit-flex !important;
@@ -4247,28 +4205,29 @@ article.casa-paso4 .casa-galeria .casa-imagen {
   padding: 0;
 }
 
-article.casa-paso4 .casa-galeria .casa-imagen img {
+.casa-paso4 .casa-galeria .casa-imagen img {
   display: inline-block;
   text-align: center;
   width: auto !important;
 }
 
 @media screen and (min-width: 35rem) {
-  article.casa-paso4 .casa-galeria .casa-imagen {
+  .casa-paso4 .casa-galeria .casa-imagen {
     height: 350px;
   }
 }
 
-article.casa-paso4 .casa-galeria li img {
+.casa-paso4 .casa-galeria li img {
   width: 100%;
 }
 
-article.casa-paso4 .casa-galeria .casa-imagenes {
+.casa-paso4 .casa-galeria .casa-imagenes {
   border-radius: 1em;
   overflow: hidden;
+  height: 100%;
 }
 
-article.casa-paso4 .casa-galeria .casa-imagenes-control {
+.casa-paso4 .casa-galeria .casa-imagenes-control {
   width: 100%;
   text-align: center;
   margin: 0.5em auto 1em;
@@ -4277,7 +4236,7 @@ article.casa-paso4 .casa-galeria .casa-imagenes-control {
 }
 
 @media screen and (min-width: 35rem) {
-  article.casa-paso4 .casa-galeria .casa-imagenes-control {
+  .casa-paso4 .casa-galeria .casa-imagenes-control {
     width: 70px;
     margin: 0;
     margin-left: 5px;
@@ -4285,28 +4244,27 @@ article.casa-paso4 .casa-galeria .casa-imagenes-control {
   }
 }
 
-article.casa-paso4 .casa-galeria .casa-imagenes-control .casa-imagencita {
+.casa-paso4 .casa-galeria .casa-imagenes-control .casa-imagencita {
   width: 65px;
   margin: 0.2em 0;
   vertical-align: top;
   border-radius: 0.3em;
   display: inline-block;
-  background: aqua;
   padding: 0;
 }
 
-article.casa-paso4 .casa-galeria .casa-imagenes-control .casa-imagencita a {
+.casa-paso4 .casa-galeria .casa-imagenes-control .casa-imagencita a {
   display: block;
   line-height: 0;
   padding: 0;
   height: 100%;
 }
 
-article.casa-paso4 .casa-galeria .casa-imagenes-control .casa-imagencita a img {
+.casa-paso4 .casa-galeria .casa-imagenes-control .casa-imagencita a img {
   height: 100%;
 }
 
-article.casa-paso4 .casa-informaciones {
+.casa-paso4 .casa-informaciones {
   box-ordinal-group: 0;
   -webkit-order: 0;
   -moz-order: 0;
@@ -4317,28 +4275,28 @@ article.casa-paso4 .casa-informaciones {
   line-height: 1.1;
 }
 
-article.casa-paso4 .casa-informaciones hr {
+.casa-paso4 .casa-informaciones hr {
   border-style: dashed;
   margin: 1em 0;
   border-color: #999;
 }
 
-article.casa-paso4 .casa-informaciones h3.Referencia {
+.casa-paso4 .casa-informaciones h3.Referencia {
   margin: 0.2em 0;
   color: #1574B7;
   font-size: 2.3em;
 }
 
-article.casa-paso4 .casa-informaciones h5 {
+.casa-paso4 .casa-informaciones h5 {
   color: #333;
   margin: 0 0 0.5em 0;
 }
 
-article.casa-paso4 .casa-informaciones p {
+.casa-paso4 .casa-informaciones p {
   margin: 0;
 }
 
-article.casa-paso4 .precios {
+.casa-paso4 .precios {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -4348,11 +4306,11 @@ article.casa-paso4 .precios {
   display: flex;
 }
 
-article.casa-paso4 .precios .precio {
+.casa-paso4 .precios .precio {
   width: 50%;
 }
 
-article.casa-paso4 .precios .precio span {
+.casa-paso4 .precios .precio span {
   background-color: #8DC54B;
   font-size: 0.8em;
   border-radius: 0.3em;
@@ -4360,15 +4318,15 @@ article.casa-paso4 .precios .precio span {
   color: white;
 }
 
-article.casa-paso4 p.ico-pdf {
+.casa-paso4 p.ico-pdf {
   margin: 1em 0;
 }
 
-article.casa-paso4 p.ico-pdf i {
+.casa-paso4 p.ico-pdf i {
   margin-right: 0.5em;
 }
 
-article.casa-paso4 ul.casa-acabados {
+.casa-paso4 ul.casa-acabados {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -4388,12 +4346,12 @@ article.casa-paso4 ul.casa-acabados {
   padding-left: 0em;
 }
 
-article.casa-paso4 ul.casa-acabados li {
+.casa-paso4 ul.casa-acabados li {
   width: 50%;
   line-height: 1.6em;
 }
 
-article.casa-paso4 a.casa-btn {
+.casa-paso4 a.casa-btn {
   box-ordinal-group: 1;
   -webkit-order: 1;
   -moz-order: 1;
@@ -4413,11 +4371,11 @@ article.casa-paso4 a.casa-btn {
   font-size: 0.9em;
 }
 
-article.casa-paso4 a.casa-btn:hover {
+.casa-paso4 a.casa-btn:hover {
   background-color: #1574B7;
 }
 
-article.casa-paso4 .casa-footer {
+.casa-paso4 .casa-footer {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -4443,11 +4401,11 @@ article.casa-paso4 .casa-footer {
   color: #1574B7;
 }
 
-article.casa-paso4 .casa-footer a {
+.casa-paso4 .casa-footer a {
   color: #1574B7;
 }
 
-article.casa-paso4 .casa-footer a:after {
+.casa-paso4 .casa-footer a:after {
   content: ' >>';
 }
 
@@ -4482,12 +4440,16 @@ section.cuadro-paso5 .cuadro-info .datos p.dato {
   color: #333;
   margin: 0;
   padding: 0 3%;
-  border-left: 1px solid white;
   display: inline-block;
 }
 
-section.cuadro-paso5 .cuadro-info .datos p.dato:nth-child(1) {
-  border-left: none;
+@media screen and (min-width: 35rem) {
+  section.cuadro-paso5 .cuadro-info .datos p.dato {
+    border-left: 1px solid white;
+  }
+  section.cuadro-paso5 .cuadro-info .datos p.dato:nth-child(1) {
+    border-left: none;
+  }
 }
 
 section.cuadro-paso5 .entrega {
@@ -4495,8 +4457,13 @@ section.cuadro-paso5 .entrega {
   margin-top: 1.5em;
   border-radius: 0.5em;
   padding: 1em;
-  width: 60%;
-  display: inline-block;
+}
+
+@media screen and (min-width: 35rem) {
+  section.cuadro-paso5 .entrega {
+    width: 60%;
+    display: inline-block;
+  }
 }
 
 section.cuadro-paso5 .entrega-title {
@@ -4568,7 +4535,7 @@ section.cuadro-paso5 a.btn {
   display: inline-block;
   font-weight: 600;
   vertical-align: bottom;
-  margin: 0 2em;
+  margin: 1em 2em;
 }
 
 section.cuadro-paso5 a.btn:hover {
@@ -4636,4 +4603,15 @@ body {
 
 .home-sections section {
   box-sizing: border-box;
+}
+
+.is-hidden {
+  opacity: 0;
+  display: none;
+}
+
+section.cuadro-paso1.is-hidden,
+section.cuadro-paso2.is-hidden,
+section.cuadro-paso3.is-hidden {
+  display: block;
 }

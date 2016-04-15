@@ -1,12 +1,12 @@
 section.cuadro-paso3
 	+cuadro-title("3","¿Ya tenés un terreno?")
-	.cuadro-info
+	#tieneTerreno.cuadro-info
 		.option
 			label si
-			input(type='radio',name="terreno",value='si') 
+			input(type='radio',name="terreno",id="terreno",value='si',onclick="if(this.checked){tieneTerreno()}") 
 		.option
 			label no
-			input(type='radio',name="terreno",value='no')
+			input(type='radio',name="terreno",id="terreno",value='no',onclick="if(this.checked){noTieneTerreno()}")
 
 
 
