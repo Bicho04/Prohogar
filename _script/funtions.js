@@ -1,9 +1,27 @@
+var nav = responsiveNav("nav.header-menu");
+
 $(function listaCasas(){
-  $('section.cuadro-paso4 .cuadro-info').owlCarousel();
+  $('section.cuadro-paso4 #info').owlCarousel();
+});
+$(function listaCasas(){
+  $('section.cuadro-pasoTerrenos .cuadro-info').owlCarousel();
 });
 
 $(function slider(){
   $("#section-casas .casa-imagenes").responsiveSlides({
+    manualControls: '.casa-imagenes-control',
+    auto: true,             // Boolean: Animate automatically, true or false
+    speed: 500,             // Integer: Speed of the transition, in milliseconds
+    timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+    pager: true,            // Boolean: Show pager, true or false
+    nav: false,             // Boolean: Show navigation, true or false
+    random: false,          // Boolean: Randomize the order of the slides, true or false
+    pause: false,           // Boolean: Pause on hover, true or false
+    pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+    });
+});
+$(function slider(){
+  $("#section-casas .terrenos-imagenes").responsiveSlides({
     manualControls: '.casa-imagenes-control',
     auto: true,             // Boolean: Animate automatically, true or false
     speed: 500,             // Integer: Speed of the transition, in milliseconds
@@ -77,13 +95,13 @@ $(function(){
 });
 
 $(function(){
-  $('section.cuadro-paso2').addClass('is-hidden');
-  $('section.cuadro-paso3').addClass('is-hidden');
-  $('section.cuadro-pasoTerrenos').addClass('is-hidden');
-  $('section.cuadro-paso4').addClass('is-hidden');
-  $('section.casas').addClass('is-hidden');
-  $('section.terrenos').addClass('is-hidden');
-  $('section.cuadro-paso5').addClass('is-hidden');
+  $('#cont-pasos section.cuadro-paso2').addClass('is-hidden');
+  $('#cont-pasos section.cuadro-paso3').addClass('is-hidden');
+  $('#cont-pasos section.cuadro-pasoTerrenos').addClass('is-hidden');
+  $('#cont-pasos section.cuadro-paso4').addClass('is-hidden');
+  $('#cont-pasos section.casas').addClass('is-hidden');
+  $('#cont-pasos section.terrenos').addClass('is-hidden');
+  $('#cont-pasos section.cuadro-paso5').addClass('is-hidden');
 
 
   $('#id_lugar').on('keyup change', function(){
@@ -91,11 +109,11 @@ $(function(){
   if ($lugar !== 0) {
 
     // $('.cuadro-paso2 h3').html($lugar.val());
-    $('section.cuadro-paso2').removeClass('is-hidden');
+    $('#cont-pasos section.cuadro-paso2').removeClass('is-hidden');
 
     $('html, body').animate({
-      scrollTop: $("section.cuadro-paso2").offset().top
-        }, 1000);
+      scrollTop: $("#cont-pasos section.cuadro-paso2").offset().top
+        }, 500);
 
    } else {}
 
@@ -106,10 +124,10 @@ $(function(){
   if ($t !== 0) {
 
     // $('.cuadro-paso2 h3').html($lugar.val());
-    $('section.cuadro-paso3').removeClass('is-hidden');
+    $('#cont-pasos section.cuadro-paso3').removeClass('is-hidden');
     $('html, body').animate({
-      scrollTop: $("section.cuadro-paso3").offset().top
-        }, 1000);
+      scrollTop: $("#cont-pasos section.cuadro-paso3").offset().top
+        }, 500);
 
    } else {}
 
@@ -120,30 +138,87 @@ $(function(){
 });
 
 function tieneTerreno() {
-  $('section.cuadro-paso4').removeClass('is-hidden');
-  $('section.casas').removeClass('is-hidden');
-  $('section.cuadro-pasoTerrenos').addClass('is-hidden');
-  $('section.terrenos').addClass('is-hidden');
+  $('#cont-pasos section.cuadro-paso4').removeClass('is-hidden');
+  $('#cont-pasos section.casas').removeClass('is-hidden');
+  $('#cont-pasos section.cuadro-pasoTerrenos').addClass('is-hidden');
+  $('#cont-pasos section.terrenos').addClass('is-hidden');
   $('html, body').animate({
-    scrollTop: $("section.cuadro-paso4").offset().top
-      }, 1000);
+    scrollTop: $("#cont-pasos section.cuadro-paso4").offset().top
+      }, 500);
 };
 function noTieneTerreno() {
-  $('section.cuadro-pasoTerrenos').removeClass('is-hidden');
-  $('section.terrenos').removeClass('is-hidden');
-  $('section.cuadro-paso4').addClass('is-hidden');
-  $('section.casas').addClass('is-hidden');
+  $('#cont-pasos section.cuadro-pasoTerrenos').removeClass('is-hidden');
+  $('#cont-pasos section.terrenos').removeClass('is-hidden');
+  $('#cont-pasos section.cuadro-paso4').addClass('is-hidden');
+  $('#cont-pasos section.casas').addClass('is-hidden');
   $('html, body').animate({
-    scrollTop: $("section.cuadro-pasoTerrenos").offset().top
-      }, 1000);
+    scrollTop: $("#cont-pasos section.cuadro-pasoTerrenos").offset().top
+      }, 500);
 };
 
 $('#aPaso5').click(function(){
-  $('section.cuadro-paso5').removeClass('is-hidden');
+  $('#cont-pasos section.cuadro-paso5').removeClass('is-hidden');
   $('html, body').animate({
-    scrollTop: $("section.cuadro-paso5").offset().top
-      }, 1000);
+    scrollTop: $("#cont-pasos section.cuadro-paso5").offset().top
+      }, 500);
+})
+$('#aPaso4').click(function(){
+  $('#cont-pasos section.cuadro-paso4').removeClass('is-hidden');
+  $('#cont-pasos section.casas').removeClass('is-hidden');
+  $('html, body').animate({
+    scrollTop: $("#cont-pasos section.cuadro-paso4").offset().top
+      }, 500);
 })
 
 
+var casaMatriz = (function () {
+  var myLatlng = new google.maps.LatLng(-25.315644,-57.598487),
+      mapCenter = new google.maps.LatLng(-25.315644,-57.598487),
+      mapCanvas = document.getElementById('mapa'),
+      mapOptions = {
+        center: mapCenter,
+        zoom: 17,
+        scrollwheel: false,
+        draggable: true,
+        disableDefaultUI: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      },
+      map = new google.maps.Map(mapCanvas, mapOptions),
+      contentString =
+        '<div class="content">'+
+        '<div class="siteNotice">'+
+        '</div>'+
+        '<h6 id="firstHeading" class="firstHeading">Prohogar</h6>'+
+        // '<div class="bodyContent"'+
+        // '<p>Avda. Curupayty c/Adrián Jara, Edif.Globo P.B.</p>'+
+        // '</div>'+
+        '</div>',
+      infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 300
+      }),
+      marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'Casa Matriz'
+      });
 
+  return {
+    init: function () {
+      map.set('styles', [{
+        featureType: 'landscape',
+        elementType: 'geometry',
+        stylers: [
+          { hue: '#ffff00' },
+          { saturation: 30 },
+          { lightness: 60}
+        ]}
+      ]);
+
+      google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map,marker);
+      });
+    }
+  };
+}());
+casaMatriz.init();

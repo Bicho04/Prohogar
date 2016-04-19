@@ -18,9 +18,9 @@
       <div class="header-menu-logo"> <a href="index.html" class="logo-img"></a></div>
       <nav class="header-menu">
         <ul class="header-botones">
-          <li><a href="nosotoros.html">Nosotros</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="#">Noticias</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
@@ -32,7 +32,7 @@
           <h1 class="slogan">Cinco pasos para tener<br>tu casa propia</h1>
         </div>
       </section>
-      <div class="cont-pasos">
+      <div id="cont-pasos" class="cont-pasos">
         <section class="cuadro-paso1">
                   <div class="cuadro-title"><span class="numero">1</span>
                     <h3 class="title">¿En qué ciudad querés vivir?</h3>
@@ -79,6 +79,51 @@
               <input type="radio" name="terreno" id="terreno" value="no" onclick="if(this.checked){noTieneTerreno()}">
             </div>
           </div>
+        </section>
+        <section class="cuadro-pasoTerrenos">
+                  <div class="cuadro-title"><span class="numero"></span>
+                    <h3 class="title">Terrenos disponibles</h3>
+                  </div>
+          <ul id="terrenos" class="cuadro-info">
+                    <li class="proyecto"><a href="#"><img src="assets/img/casas/UnDormitorio.jpg" alt="">
+                        <h4><strong>Terreno 12 x 30...</strong></h4></a></li>
+                    <li class="proyecto"><a href="#"><img src="assets/img/casas/DosDormitorios.jpg" alt="">
+                        <h4><strong>Terreno ubicado...</strong></h4></a></li>
+                    <li class="proyecto"><a href="#"><img src="assets/img/casas/TresDormitorios.jpg" alt="">
+                        <h4><strong>Lotes de 12x30...</strong></h4></a></li>
+                    <li class="proyecto"><a href="#"><img src="assets/img/casas/UnDormitorio.jpg" alt="">
+                        <h4><strong>Terreno 12 x 30...</strong></h4></a></li>
+                    <li class="proyecto"><a href="#"><img src="assets/img/casas/DosDormitorios.jpg" alt="">
+                        <h4><strong>Terreno ubicado...</strong></h4></a></li>
+                    <li class="proyecto"><a href="#"><img src="assets/img/casas/TresDormitorios.jpg" alt="">
+                        <h4><strong>Lotes de 12x30...</strong></h4></a></li>
+          </ul>
+        </section>
+        <section id="section-terrenos" class="terrenos">
+                  <div class="casa-paso4">
+                    <aside class="casa-galeria">
+                      <div class="casa-imagenes">
+                        <figure class="casa-imagen"><img src="assets/img/casas/Casa-1.1.jpg" alt=""></figure>
+                      </div>
+                    </aside>
+                    <div class="casa-informaciones">
+                      <h3 class="Referencia">Casa ref Ciudad</h3>
+                      <p>Sup. Terreno 12 x 30 a 800 metros de la ruta que une ruta i y ruta ii zona poblada terreno 360m2 www.bienesraices.com.py
+                      </p>
+                      <hr>
+                      <div class="precios terreno">
+                        <div class="precio">
+                          <h5>Precio</h5><span>Gs. 35.000.000</span>
+                        </div>
+                        <div class="precio">
+                        </div>
+                      </div>
+                      <hr>
+                    </div><a href="#" id="aPaso4" class="casa-btn btn">Seleccionar terreno</a>
+                    <footer class="casa-footer">
+                      <p>1 de 10 opciones</p><a href="#">ver siguiente</a>
+                    </footer>
+                  </div>
         </section>
         <section class="cuadro-paso4">
                   <div class="cuadro-title"><span class="numero">4</span>
@@ -150,66 +195,6 @@
                   </div>
           
         </section>
-        <section class="cuadro-pasoTerrenos">
-                  <div class="cuadro-title"><span class="numero"></span>
-                    <h3 class="title">Terrenos disponibles</h3>
-                  </div>
-          <ul id="info" class="cuadro-info">
-                    <li class="proyecto"><a href="#"><img src="assets/img/casas/UnDormitorio.jpg" alt="">
-                        <h4><strong>Ref</strong>123</h4>
-                        <h4><strong>1</strong>Dormitorio</h4></a></li>
-                    <li class="proyecto"><a href="#"><img src="assets/img/casas/DosDormitorios.jpg" alt="">
-                        <h4><strong>Ref</strong>456</h4>
-                        <h4><strong>2</strong>Dormitorio</h4></a></li>
-                    <li class="proyecto"><a href="#"><img src="assets/img/casas/UnDormitorio.jpg" alt="">
-                        <h4><strong>Ref</strong>789</h4>
-                        <h4><strong>1</strong>Dormitorio</h4></a></li>
-          </ul>
-        </section>
-        <section id="section-terrenos" class="terrenos">
-                  <div class="casa-paso4">
-                    <aside class="casa-galeria">
-                      <div class="casa-imagenes">
-                        <figure class="casa-imagen"><img src="assets/img/casas/Casa-1.1.jpg" alt=""></figure>
-                        <figure class="casa-imagen"><img src="assets/img/casas/Casa-1.2.jpg" alt=""></figure>
-                        <figure class="casa-imagen"><img src="assets/img/casas/Casa-1.3.jpg" alt=""></figure>
-                      </div>
-                      <ul class="casa-imagenes-control">
-                        <li class="casa-imagencita"><a href="#"><img src="assets/img/casas/Casa-1.1.jpg" alt=""></a></li>
-                        <li class="casa-imagencita"><a href="#"><img src="assets/img/casas/Casa-1.2.jpg" alt=""></a></li>
-                        <li class="casa-imagencita"><a href="#"><img src="assets/img/casas/Casa-1.3.jpg" alt=""></a></li>
-                      </ul>
-                    </aside>
-                    <div class="casa-informaciones">
-                      <h3 class="Referencia">Casa ref 444</h3>
-                      <p>1 baño</p>
-                      <p>Sup. 112.62 m<span>2</span>a 1.570.919 Gs.</p>
-                      <hr>
-                      <div class="precios">
-                        <div class="precio">
-                          <h5>Contado</h5><span>Gs. 176.914.893</span>
-                        </div>
-                        <div class="precio">
-                          <h5>Financiado</h5><span>Gs. 1.646.389</span>
-                        </div>
-                      </div>
-                      <p class="ico-pdf"><a href="#"><i class="fa fa-file-text"></i></a>Ver ficha técnica</p>
-                      <p class="ico-pdf"><a href="#"><i class="fa fa-file-text"></i></a>ver presupuesto</p>
-                      <hr>
-                      <h5>Acabados</h5>
-                      <ul class="casa-acabados">
-                        <li>minimalista</li>
-                        <li>Rústico</li>
-                        <li>Tradicional</li>
-                        <li>Fina</li>
-                        <li>Lujo</li>
-                      </ul>
-                    </div><a href="#" id="aPaso5" class="casa-btn btn">Seleccionar proyecto</a>
-                    <footer class="casa-footer">
-                      <p>1 de 10 opciones</p><a href="#">ver siguiente</a>
-                    </footer>
-                  </div>
-        </section>
         <section class="cuadro-paso5">
                   <div class="cuadro-title"><span class="numero">5</span>
                     <h3 class="title">Seleccione un presupuesto</h3>
@@ -267,6 +252,7 @@
     <script type="text/javascript" src="assets/js/responsive-nav.min.js"></script>
     <script type="text/javascript" src="assets/js/owl-carousel.min.js"></script>
     <script type="text/javascript" src="assets/js/responsiveslides.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="assets/js/functions.min.js"></script>
   </body>
 </html>

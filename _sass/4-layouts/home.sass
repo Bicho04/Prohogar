@@ -12,15 +12,66 @@ body
   section
     box-sizing: border-box
 
-
 .is-hidden
   opacity: 0
-  display: none
+  display: none !important
 
 section.cuadro-paso1,
 section.cuadro-paso2,
 section.cuadro-paso3,
   &.is-hidden
-    display: block
+    display: block !important
 
+section.nosotros
+  max-width: 890px
+  margin: auto
+  padding-bottom: 10em
+  h1 
+    color: #1574B7
+    font-size: 2.8em
+  p 
+    line-height: 2em
+
+section.contacto
+  max-width: 890px
+  margin: auto
+  text-align: left
+  padding-bottom: 8em
+  h2 
+    color: #1574B7
+    width: 100%
+    text-align: center
+    border-bottom: 3px solid #1574B7
+  .contenido
+    @include display(flex)
+    @include justify-content(space-between)
+  .cont-info
+    .logo
+      margin: 0 0 1.5em
+    p 
+      color: #1574B7
+      margin: 0
+      font-size: 1.2em
+  .cont-form
+    width: 50%
+    @include display(flex)
+    @include justify-content(stretch)
+    @include align-items(stretch)
+    @include flex-direction(column)
+    input,textarea
+      border: 1px solid $color-primary-light
+      border-radius: 1em
+      padding: 1em
+      width: 100%
+      background: transparent
+    .input
+      width: 100%
+      margin-bottom: 1em
+    .boton
+      border-radius: 1em
+      width: 160px
+      color:#fff
+      background: $color-primary-light
+      text-transform: uppercase
+      font-weight: 700
 

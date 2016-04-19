@@ -1,0 +1,8 @@
+section.cuadro-paso2-b
+	//- +cuadro-title("","Ingreso familiar")
+	.cuadro-info
+		input(type="text",placeholder='ingreso',id="input-ingreso",onkeyup="miles(this,this.value.charAt(this.value.length-1))")
+		select(name="id_formadepago",id="id_formadepago")
+			option(value="00") contado
+			option(value='1') financiado
+		button buscar

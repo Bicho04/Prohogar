@@ -1,4 +1,22 @@
-section.cuadro-paso2
+section.cuadro-paso2,
+section.cuadro-paso2-b
 	background-color: $color-paso2
 	// height: 220px
 	// width: 30%
+section.cuadro-paso2-b
+	@include media($large-screen)
+		width: 57% !important
+		height: 100px
+	.cuadro-info
+		@include display(flex)
+		@include justify-content(space-arround)
+		button 
+			background: darken($color-paso2,20)
+			border: none
+		input,select,button
+			margin: 0 0.5em
+		button
+			text-transform: uppercase
+			font-weight: 600
+			border-radius: 0.5em
+			padding: 0.5em 1.5em

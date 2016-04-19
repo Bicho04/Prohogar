@@ -1,9 +1,19 @@
-section.cuadro-paso5
-	background-color: $color-paso5
+section.cuadro-paso5,
+section.cuadro-paso5-b
+	background:
+		color: $color-paso5
+		position: right bottom
+		repeat: no-repeat
+		size: 40%
 	height: auto
+	padding-bottom: 3em
+	@include media($small-screen) 
+		background:
+			image: url(../img/casa.jpg)
 	.cuadro-title
 		@include justify-content(flex-start)
 		width: 95%
+		padding-bottom: 1em
 
 	.cuadro-info
 		width: 95%
@@ -27,6 +37,7 @@ section.cuadro-paso5
 		margin-top: 1.5em
 		border-radius: 0.5em
 		padding: 1em
+		margin-bottom: 1em
 		@include media($small-screen) 
 			width: 60%
 			display: inline-block
@@ -68,11 +79,84 @@ section.cuadro-paso5
 		display: inline-block
 		font-weight: 600
 		vertical-align: bottom
-		margin: 1em 2em
+		text-align: center
+		margin: 1em 0 1em 2em
+		width: 36%
 		&:hover
 			background-color: $color-paso3
 
+section.cuadro-paso5-b
+	background:
+		color: $color-paso5
+		position: right bottom
+		repeat: no-repeat
+	height: auto
+	padding-bottom: 3em
+	@include media($small-screen) 
+		background:
+			image: url(../img/casa.jpg)
+	.cuadro-title
+		@include justify-content(flex-start)
+		// @include display(flex)
+		width: 95%
+		padding-bottom: 1em
+	.cuadro-info
+		width: 95%
+		.datos
+			text-align: center
+			padding: 0.3em 0	
+			border: 1px solid #fff
+			border-radius: 0.5em
+			p.dato
+				color: $text-color
+				margin: 0
+				padding: 0 3%
+				display: inline-block
+				@include media($large-screen) 
+					border-left: 1px solid white
+					&:nth-child(1)
+						border-left: none
+	.entrega
+		border: 1px solid #fff
+		margin-top: 1.5em
+		border-radius: 0.5em
+		padding: 1em
+		display: inline-block
+		width: 100%
+		margin-bottom: 1em
+		@include media($large-screen) 
+			width: 60%
+		// background: pin
+		&-title
+			@include display(flex)
+			@include align-items(center)
+			@include justify-content(center)
+			h3
+				font-weight: 400
+				color: #fff
+				margin-right: 1em
+				position: relative
+				bottom: 0.5em
+			select
+				max-width: 180px
+		&-table
+			width: 100%
+			border-radius: 1em
+			overflow: hidden
+			border: none
+			color: $text-color
+			background-color: lighten($color-paso5,30)
 
-
-
+			tr 
+				border: 1px	solid $color-paso5
+				&.ultimo
+					background: #F05B26
+					color: #fff
+					border-radius: 0 0 1em 1em
+			td
+				padding-left: 0.5em
+				line-height: 2em
+			th 
+				padding-left: 0.5em
+				text-align: left
 

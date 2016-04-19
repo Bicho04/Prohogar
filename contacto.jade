@@ -1,0 +1,22 @@
+extends _layout/default
+
+block title
+	title Prohogar S.A. - Presupuesto 5 Pasos
+
+block body
+	include _includes/mapa
+	section.contacto
+		h2 Contacte con nosotros
+		.contenido
+			.cont-info
+				.logo
+					img(src="assets/img/Logo-Prohogar-Z.png", alt="")
+				p Austria 1730 Esq. Viena, Asunción
+				p 021-603937, 0983-828382
+				p contacto@prohogar.com.py
+			form(action="#").cont-form
+				.input: input(type="text",placeholder="Nombre")
+				.input: input(type="text",placeholder="Email")
+				.input: input(type="text",placeholder="Celular")
+				.input: textarea(type="text",placeholder="Texto")
+				.boton: input(type="submit",value="Enviar")
