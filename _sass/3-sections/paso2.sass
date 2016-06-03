@@ -3,6 +3,21 @@ section.cuadro-paso2-b
 	background-color: $color-paso2
 	// height: 220px
 	// width: 30%
+	position: relative
+.aPaso3-btn.btn
+	text-align: right
+	padding: 1em 0
+	width: 100%
+	display: block
+	color: #fff
+	position: absolute
+	right: 10%
+	&:hover
+		color: #ddd
+		&:after
+			position: absolute
+			right: -1em
+			content: ' >'
 section.cuadro-paso2-b
 	@include media($large-screen)
 		width: 57% !important
@@ -20,3 +35,4 @@ section.cuadro-paso2-b
 			font-weight: 600
 			border-radius: 0.5em
 			padding: 0.5em 1.5em
+			background: transparent

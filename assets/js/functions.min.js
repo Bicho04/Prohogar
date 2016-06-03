@@ -1,10 +1,34 @@
-var nav = responsiveNav("nav.header-menu");
+// var nav = responsiveNav("nav.header-menu");
 
 $(function listaCasas(){
-  $('section.cuadro-paso4 #info').owlCarousel();
+  $('section.cuadro-paso4 #info').owlCarousel({
+    responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+        }
+  });
 });
 $(function listaCasas(){
-  $('section.cuadro-pasoTerrenos .cuadro-info').owlCarousel();
+  $('section.cuadro-pasoTerrenos .cuadro-info').owlCarousel({
+    responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:false
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+        }
+  });
 });
 
 $(function slider(){
@@ -78,21 +102,9 @@ function miles(donde,caracter){
 };
 
 
-$(function(){
-  $('#input-ingreso').on('keyup change', function(){
-    $t = $(this);
 
-    var ingreso = '';
-    $('#input-ingreso').each(function(){
-      ingreso = $t.val();
-      
-    })
-    
-    var montoTotal_a_financiar= ingreso;
 
-    $('#entrega .entreg-montoTotal').html(montoTotal_a_financiar);
-  });
-});
+
 
 $(function(){
   $('#cont-pasos section.cuadro-paso2').addClass('is-hidden');
@@ -118,23 +130,12 @@ $(function(){
    } else {}
 
    });
-
-  $('#input-ingreso').on('keyup change', function(){
-  $t = $(this);
-  if ($t !== 0) {
-
-    // $('.cuadro-paso2 h3').html($lugar.val());
+  $('#aPaso3').click(function(){
     $('#cont-pasos section.cuadro-paso3').removeClass('is-hidden');
     $('html, body').animate({
       scrollTop: $("#cont-pasos section.cuadro-paso3").offset().top
         }, 500);
-
-   } else {}
-
-   });
-  
-
-
+  });
 });
 
 function tieneTerreno() {
